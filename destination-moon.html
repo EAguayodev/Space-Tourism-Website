@@ -3,35 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
   <title>Frontend Mentor | Space tourism website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/input.css">
+  <link rel="stylesheet" href="src/output.css">
+  <script src="js/script.js" defer></script>
 </head>
-<body>
+<body
+  class="max-w-1440px bg-[url('../assets/destination/background-destination-desktop.jpg')] bg-cover bg-no-repeat font-family-bellefair max-md:bg-[url('../assets/destination/background-destination-tablet.jpg')] max-sm:bg-[url('../assets/destination/background-destination-mobile.jpg')]">
+  <header>
+    <nav>
+      <div class="flex justify-around items-center relative top-3">
+        <div class="max-sm:flex max-sm:justify-around">
+          <a href="index.html">
+            <img src="assets/shared/logo.svg" alt="Space Tourism Logo">
+          </a>
+          <button class="hidden mobile-btn max-sm:block cursor-pointer">
+            <img class="icon-hamburger" src="assets/shared/icon-hamburger.svg" alt="Hamburger Menu">
+            <img class="icon-close max-sm:hidden" src="assets/shared/icon-close.svg" alt="Close Menu">
+          </button>
+        </div>
+        <div class="bg-gray-400 w-2xl h-px max-lg:hidden"></div>
+        <div class="backdrop-blur-2xl py-8 px-6 max-sm:hidden">
+          <ul class="menu-nav flex space-x-8 text-white uppercase tracking-widest gap-5">
+            <li>
+              <a class="border-b-4 border-transparent pb-8 transition-colors duration-300 hover:border-gray-300"
+                href="index.html"><span class="font-bold">00</span> Home</a>
+            </li>
+            <li>
+              <a class="border-b-4 pb-8 border-current transition-colors duration-300"
+                href="destination-moon.html"><span class="font-bold">01</span> Destination</a>
+            </li>
+            <li>
+              <a class="border-b-4 border-transparent pb-8 transition-colors duration-300 hover:border-gray-300"
+                href="crew-commander.html"><span class="font-bold">02</span> Crew</a>
+            </li>
+            <li>
+              <a class="border-b-4 border-transparent pb-8 transition-colors duration-300 hover:border-gray-300"
+                href="technology-vehicle.html"><span class="font-bold">03</span> Technology</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container mx-auto flex flex-col items-center mt-40">
+      <div>
+        <h1 class="text-3xl text-white max-sm:text-[1rem] max-sm:text-center"><span class="text-gray-400 font-bold">01</span> PICK YOUR DESTINATION</h1>
+        <div class="flex justify-between gap-12 max-lg:flex-col max-lg:justify-center max-lg:items-center mt-20">
+          <div>
+            <img class="destination-img" src="assets/destination/image-moon.webp" alt="Moon Image">
+          </div>
+          <div>
+            <div>
+              <ul class="flex text-white gap-8 uppercase mb-10 max-lg:justify-center max-lg:items-center">
+                <li class="destination-travel border-b-4 pb-2 border-current"><a
+                    class="transition-colors duration-300 hover:border-gray-300" href="destination-moon.html">Moon</a>
+                </li>
+                <li class="destination-travel text-blue-300"><a
+                    class="transition-colors duration-300 hover:border-gray-300 hover:border-b-4 hover:pb-2.5"
+                    href="destination-mars.html">Mars</a></li>
+                <li class="destination-travel text-blue-300"><a
+                    class="transition-colors duration-300 hover:border-gray-300 hover:border-b-4 hover:pb-2.5"
+                    href="destination-europa.html">Europa</a></li>
+                <li class="destination-travel text-blue-300"><a
+                    class="transition-colors duration-300 hover:border-gray-300 hover:border-b-4 hover:pb-2.5"
+                    href="destination-titan.html">Titan</a></li>
+              </ul>
+            </div>
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
-
-  01 Pick your destination
-
-  Moon
-  Mars
-  Europa
-  Titan
-
-  Moon
-
-  See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
-  regain perspective and come back refreshed. While you’re there, take in some history 
-  by visiting the Luna 2 and Apollo 11 landing sites.
-
-  Avg. distance
-  384,400 km
-
-  Est. travel time
-  3 days
+            <div class="max-lg:flex max-lg:flex-col max-lg:justify-center max-lg:items-center">
+              <h2 class="destination-name text-white text-8xl max-lg:text-center max-sm:text-[3.5rem]">Moon</h2>
+              <p class="destination-description text-blue-300 w-[27.813rem] text-[1.125rem] mb-5 max-lg:w-[32.125rem] max-lg:text-[1rem] max-lg:text-center max-sm:w-[20.438rem]">See our planet as you’ve never seen
+                it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history
+                by visiting the Luna 2 and Apollo 11 landing sites.</p>
+            </div>
+            <div class="bg-gray-400 w-2xl h-px max-lg:w-[32.125rem] max-sm:w-[20.438rem]"></div>
+            <div class="flex gap-20 mt-10 max-lg:justify-center max-lg:items-center max-md:flex-col max-md:gap-10">
+              <div>
+                <p class="text-blue-300 mb-2">AVG. DISTANCE</p>
+                <p class="text-white text-2xl">384,400 KM</p>
+              </div>
+              <div>
+                <p class="text-blue-300 mb-2">EST. TRAVEL TIME</p>
+                <p class="text-white text-2xl">3 DAYS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
 </html>

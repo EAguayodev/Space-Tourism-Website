@@ -1,3 +1,23 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import "tailwindcss";
+
+
+@theme {
+        --font-family-bellefair:  "Bellefair", serif;
+        --color-blue-300: hsl(231, 77%, 90%);
+        --color-blue-900: hsl(230, 35%, 7%);
+        --color-white: hsl(0, 0%, 100%);
+        --color-gray-400: #979797;
+
+        /* Font sizes in rem — scales with user browser font size for accessibility */
+        --font-size-body-md: 1.125rem; /* 18px ÷ 16 */
+        --font-size-body-sm: 1rem;     /* 16px ÷ 16 */
+}
+
+.menu-nav {
+    font-size: var(--font-size-body-sm);
+}
+
+.btn-explore{
+    border-radius: 150px;
+    transition: all 0.3s ease;
+}

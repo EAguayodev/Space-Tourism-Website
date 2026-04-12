@@ -93,7 +93,7 @@ Describe how you used AI tools (if any) during this project. This helps demonstr
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@EAguayodev](https://www.frontendmentor.io/profile/EAguayodev)
 
 ## Acknowledgments
 

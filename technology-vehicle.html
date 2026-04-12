@@ -3,30 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
   <title>Frontend Mentor | Space tourism website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/input.css">
+  <link rel="stylesheet" href="src/output.css">
+  <script src="js/script.js" defer></script>
 </head>
-<body>
+<body
+  class="max-w-full bg-[url('../assets/technology/background-technology-desktop.jpg')] bg-cover bg-no-repeat font-family-bellefair max-md:bg-[url('../assets/technology/background-technology-tablet.jpg')] max-sm:bg-[url('../assets/technology/background-technology-mobile.jpg')]">
+  <header>
+    <nav>
+      <div class="flex justify-around items-center relative top-3">
+        <div class="max-sm:flex max-sm:justify-around">
+          <a href="index.html">
+            <img src="assets/shared/logo.svg" alt="Space Tourism Logo">
+          </a>
+          <button class="hidden mobile-btn max-sm:block cursor-pointer">
+            <img class="icon-hamburger" src="assets/shared/icon-hamburger.svg" alt="Hamburger Menu">
+            <img class="icon-close max-sm:hidden" src="assets/shared/icon-close.svg" alt="Close Menu">
+          </button>
+        </div>
+        <div class="bg-gray-400 w-2xl h-px max-lg:hidden"></div>
+        <div class="backdrop-blur-2xl py-8 px-6 max-sm:hidden">
+          <ul class="menu-nav flex space-x-8 text-white uppercase tracking-widest gap-5">
+            <li>
+              <a class="border-b-4 border-transparent pb-8 transition-colors duration-300 hover:border-gray-300"
+                href="index.html"><span class="font-bold">00</span> Home</a>
+            </li>
+            <li>
+              <a class="border-b-4 border-transparent pb-8 transition-colors duration-300 hover:border-gray-300"
+                href="destination-moon.html"><span class="font-bold">01</span> Destination</a>
+            </li>
+            <li>
+              <a class="border-b-4 border-transparent pb-8 transition-colors duration-300 hover:border-gray-300"
+                href="crew-commander.html"><span class="font-bold">02</span> Crew</a>
+            </li>
+            <li>
+              <a class="border-b-4 pb-8 border-current transition-colors duration-300 hover:border-gray-300"
+                href="technology-vehicle.html"><span class="font-bold">03</span> Technology</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container mx-auto flex justify-center mt-40">
+      <div>
+        <h1 class="text-3xl text-white"><span class="text-gray-400 font-bold">03</span> SPACE LAUNCH 101</h1>
+        <div
+          class="flex justify-between items-center gap-20 mx-auto max-lg:flex-col-reverse max-lg:justify-center max-lg:items-center">
+          <div class="gap-10 max-lg:flex max-lg:flex-row max-lg:justify-center max-lg:items-center">
+            <div class="gap-10 max-lg:flex max-lg:flex-row max-lg:justify-center max-lg:items-center">
+              <div>
+                <button
+                  class="button-technology technology-vehicle bg-white hover:border-white border-white border-2 text-3xl mt-8 rounded-full py-7 px-10 cursor-pointer">
+                  1
+                </button>
+              </div>
+              <div>
+                <button
+                  class="button-technology technology-spaceport bg-transparent hover:border-white border-gray-400 text-white text-3xl border-2 mt-8 rounded-full py-7 px-10 cursor-pointer">
+                  2
+                </button>
+              </div>
+              <div>
+                <button
+                  class="button-technology technology-capsule bg-transparent hover:border-white border-gray-400 text-white text-3xl border-2 mt-8 rounded-full py-7 px-10 cursor-pointer">
+                  3
+                </button>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 class="text-[3.5rem] text-white mb-8 w-2xl max-lg:text-[2.5rem] max-md:text-[1.5rem]">
+              <span class="text-[2rem] text-gray-400">THE TERMINOLOGY...</span><br>
+              LAUNCH VEHICLE
+            </h2>
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
-
-  03 Space launch 101
-
-  1
-  2
-  3
-
-  The terminology...
-  Launch vehicle
-
-  A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
-  payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
-  WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
-  it's quite an awe-inspiring sight on the launch pad!
+            <p class="text-blue-300 w-2xl text-[1.125rem] max-lg:text-center max-lg:text-[1rem] max-lg:w-[32.125rem] max-sm:text-[0.875rem] max-sm:w-[0.938rem]">A launch vehicle or carrier rocket is a rocket-propelled vehicle
+              used to carry a
+              payload from Earth's surface to space, usually to Earth orbit or beyond. Our
+              WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall,
+              it's quite an awe-inspiring sight on the launch pad!</p>
+          </div>
+          <div>
+            <picture>
+              <source media="(min-width: 1024px)" srcset="assets/technology/image-launch-vehicle-portrait.jpg" width="1024" height="310">
+              <source media="(min-width: 768px)" srcset="assets/technology/image-launch-vehicle-landscape.jpg" width="768" height="310">
+              <source media="(min-width: 460px)" srcset="assets/technology/image-launch-vehicle-landscape.jpg" width="768" height="310">
+              <img class="technology-img" src="assets/technology/image-launch-vehicle-landscape.jpg" alt="Launch Vehicle Image" width="515" height="527">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
