@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 
+
 @theme {
         --font-family-bellefair:  "Bellefair", serif;
         --color-blue-300: hsl(231, 77%, 90%);

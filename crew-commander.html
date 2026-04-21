@@ -13,11 +13,11 @@
   <script src="js/script.js" defer></script>
 </head>
 <body
-  class="bg-[url('../assets/crew/background-crew-desktop.jpg')] bg-cover bg-no-repeat font-family-bellefair max-lg:bg-[url('../assets/crew/background-crew-tablet.jpg')] max-md:bg-[url('../assets/crew/background-crew-mobile.jpg')]">
-  <header>
+  class="container mx-auto bg-[url('../assets/crew/background-crew-desktop.jpg')] bg-cover bg-no-repeat font-family-bellefair max-lg:bg-[url('../assets/crew/background-crew-tablet.jpg')] max-md:bg-[url('../assets/crew/background-crew-mobile.jpg')]">
+  <header class="container">
     <nav>
       <div class="flex justify-around items-center relative top-3">
-        <div class="max-sm:flex max-sm:justify-around">
+        <div class="max-sm:w-full max-sm:gap-10 max-sm:flex max-sm:justify-around max-sm:items-center">
           <a href="index.html">
             <img src="assets/shared/logo.svg" alt="Space Tourism Logo">
           </a>
@@ -51,10 +51,10 @@
     </nav>
   </header>
   <main>
-    <div class="container mx-auto flex mt-40">
-      <div class="max-lg:flex max-lg:flex-col max-lg:justify-center max-lg:items-center">
+    <div class="container mx-auto flex justify-center items-center mt-40">
+      <div class="flex justify-center flex-col max-lg:flex max-lg:flex-col max-lg:justify-center max-lg:items-center">
         <h1 class="text-3xl text-white"><span class="text-gray-400 font-bold">02</span> MEET YOUR CREW</h1>
-        <div class="flex justify-around gap-12 max-lg:flex-col max-lg:justify-center max-lg:items-center mt-20">
+        <div class="flex justify-around items-center gap-12 max-lg:flex-col max-lg:justify-center max-lg:items-center mt-20">
           <div class="max-lg:flex max-lg:flex-col max-lg:justify-center max-lg:items-center">
             <div class="max-lg:flex max-lg:flex-col max-lg:items-center">
               <p class="crew-title text-3xl text-gray-400 mb-5 max-lg:text-center">COMMANDER</p>
@@ -62,7 +62,9 @@
                 DOUGLAS HURLEY
               </h2>
 
-              <p class="crew-description text-blue-300 w-[33.688rem] text-[1.125rem] max-lg:text-center max-lg:text-[1rem] max-lg:w-[32.125rem] max-sm:text-[0.875rem] max-sm:w-[20.438rem]">Douglas Gerald Hurley is an American engineer,
+              <p
+                class="crew-description text-blue-300 w-[33.688rem] text-[1.125rem] max-lg:text-center max-lg:text-[1rem] max-lg:w-lg max-sm:text-[0.875rem] max-sm:w-[20.438rem]">
+                Douglas Gerald Hurley is an American engineer,
                 former Marine Corps
                 pilot
                 and former NASA astronaut. He launched into space for the third time as
@@ -84,7 +86,8 @@
             </div>
           </div>
           <div>
-            <img class="max-xl::w-[32.125rem] max-sm:w-full" src="assets/crew/image-douglas-hurley.webp" alt="Douglas Hurley Image">
+            <img class="max-xl:w-[128.5] max-sm:w-full" src="assets/crew/image-douglas-hurley.webp"
+              alt="Douglas Hurley Image">
           </div>
         </div>
       </div>

@@ -13,11 +13,11 @@
   <script src="js/script.js" defer></script>
 </head>
 <body
-  class="max-w-1440px bg-[url('../assets/destination/background-destination-desktop.jpg')] bg-cover bg-no-repeat font-family-bellefair max-md:bg-[url('../assets/destination/background-destination-tablet.jpg')] max-sm:bg-[url('../assets/destination/background-destination-mobile.jpg')]">
-  <header>
+  class="container mx-auto bg-[url('../assets/destination/background-destination-desktop.jpg')] bg-cover bg-no-repeat font-family-bellefair max-md:bg-[url('../assets/destination/background-destination-tablet.jpg')] max-sm:bg-[url('../assets/destination/background-destination-mobile.jpg')]">
+  <header class="container">
     <nav>
       <div class="flex justify-around items-center relative top-3">
-        <div class="max-sm:flex max-sm:justify-around">
+        <div class="max-sm:w-full max-sm:gap-10 max-sm:flex max-sm:justify-around max-sm:items-center">
           <a href="index.html">
             <img src="assets/shared/logo.svg" alt="Space Tourism Logo">
           </a>
@@ -53,44 +53,48 @@
   <main>
     <div class="container mx-auto flex flex-col items-center mt-40">
       <div>
-        <h1 class="text-3xl text-white max-sm:text-[1rem] max-sm:text-center"><span class="text-gray-400 font-bold">01</span> PICK YOUR DESTINATION</h1>
+        <h1 class="text-[1.75rem] text-white max-sm:text-[1rem] max-sm:text-center"><span
+            class="text-gray-400 font-bold">01</span> PICK YOUR DESTINATION</h1>
         <div class="flex justify-between gap-12 max-lg:flex-col max-lg:justify-center max-lg:items-center mt-20">
           <div>
-            <img class="destination-img" src="assets/destination/image-moon.webp" alt="Moon Image">
+            <img class="destination-img max-lg:w-75 max-sm:w-37.5" src="assets/destination/image-moon.webp" alt="Moon Image">
           </div>
           <div>
             <div>
               <ul class="flex text-white gap-8 uppercase mb-10 max-lg:justify-center max-lg:items-center">
-                <li class="destination-travel border-b-4 pb-2 border-current"><a
+                <li class="destination-travel moon border-b-4 pb-2 border-current"><a
                     class="transition-colors duration-300 hover:border-gray-300" href="destination-moon.html">Moon</a>
                 </li>
-                <li class="destination-travel text-blue-300"><a
+                <li class="destination-travel mars text-blue-300"><a
                     class="transition-colors duration-300 hover:border-gray-300 hover:border-b-4 hover:pb-2.5"
                     href="destination-mars.html">Mars</a></li>
-                <li class="destination-travel text-blue-300"><a
+                <li class="destination-travel europa text-blue-300"><a
                     class="transition-colors duration-300 hover:border-gray-300 hover:border-b-4 hover:pb-2.5"
                     href="destination-europa.html">Europa</a></li>
-                <li class="destination-travel text-blue-300"><a
+                <li class="destination-travel titan text-blue-300"><a
                     class="transition-colors duration-300 hover:border-gray-300 hover:border-b-4 hover:pb-2.5"
                     href="destination-titan.html">Titan</a></li>
               </ul>
             </div>
 
             <div class="max-lg:flex max-lg:flex-col max-lg:justify-center max-lg:items-center">
-              <h2 class="destination-name text-white text-8xl max-lg:text-center max-sm:text-[3.5rem]">Moon</h2>
-              <p class="destination-description text-blue-300 w-[27.813rem] text-[1.125rem] mb-5 max-lg:w-[32.125rem] max-lg:text-[1rem] max-lg:text-center max-sm:w-[20.438rem]">See our planet as you’ve never seen
-                it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history
+              <h2 class="destination-name text-white text-8xl max-lg:text-center max-lg:text-[5rem] max-sm:text-[3.5rem]">MOON</h2>
+              <p
+                class="destination-description text-blue-300 w-[27.813rem] text-[1.125rem] mb-5 max-lg:w-[128.5] max-lg:text-[1rem] max-lg:text-center max-sm:w-[20.438rem]">
+                See our planet as you’ve never seen
+                it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re
+                there, take in some history
                 by visiting the Luna 2 and Apollo 11 landing sites.</p>
             </div>
-            <div class="bg-gray-400 w-2xl h-px max-lg:w-[32.125rem] max-sm:w-[20.438rem]"></div>
+            <div class="bg-gray-400 w-2xl h-px max-lg:w-[128.5] max-sm:w-[20.438rem]"></div>
             <div class="flex gap-20 mt-10 max-lg:justify-center max-lg:items-center max-md:flex-col max-md:gap-10">
               <div>
-                <p class="text-blue-300 mb-2">AVG. DISTANCE</p>
-                <p class="text-white text-2xl">384,400 KM</p>
+                <p class="text-blue-300 mb-2 text-[0.875rem]">AVG. DISTANCE</p>
+                <p class="text-white text-[1.75rem]">384,400 KM</p>
               </div>
               <div>
-                <p class="text-blue-300 mb-2">EST. TRAVEL TIME</p>
-                <p class="text-white text-2xl">3 DAYS</p>
+                <p class="text-blue-300 mb-2 text-[0.875rem]">EST. TRAVEL TIME</p>
+                <p class="text-white text-[1.75rem]">3 DAYS</p>
               </div>
             </div>
           </div>
