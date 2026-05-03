@@ -23,26 +23,28 @@
           </a>
           <button class="hidden mobile-btn max-sm:block cursor-pointer">
             <img class="icon-hamburger" src="assets/shared/icon-hamburger.svg" alt="Hamburger Menu">
-            <img class="icon-close max-sm:hidden" src="assets/shared/icon-close.svg" alt="Close Menu">
+            <img class="icon-close hidden max-sm:relative max-sm:z-50" src="assets/shared/icon-close.svg" alt="Close Menu">
           </button>
         </div>
         <div class="bg-gray-400 w-2xl h-px max-lg:hidden"></div>
-        <div class="backdrop-blur-2xl py-8 px-6 max-sm:hidden">
-          <ul class="menu-nav flex space-x-8 text-white uppercase tracking-widest gap-5">
+        <div
+          class="menu-list backdrop-blur-2xl py-8 px-6 max-sm:absolute max-sm:-top-3 max-sm:right-0 max-sm:left-30 max-sm:bg-[rgba(0,0,0,0.5)] max-sm:w-63.5 max-sm:h-220 max-sm:z-40">
+          <ul
+            class="menu-nav flex space-x-8 text-white uppercase tracking-widest gap-5 max-sm:flex-col max-sm:gap-10 max-sm:px-9 max-sm:py-16">
             <li>
-              <a class="border-b-4 border-transparent pb-8 transition-colors duration-300 hover:border-gray-300"
+              <a class="border-b-4 border-transparent pb-7.5 transition-colors duration-300 hover:border-gray-300"
                 href="index.html"><span class="font-bold">00</span> Home</a>
             </li>
             <li>
-              <a class="border-b-4 pb-8 border-current transition-colors duration-300"
+              <a class="border-b-4 pb-7.5 border-current transition-colors duration-300"
                 href="destination-moon.html"><span class="font-bold">01</span> Destination</a>
             </li>
             <li>
-              <a class="border-b-4 border-transparent pb-8 transition-colors duration-300 hover:border-gray-300"
+              <a class="border-b-4 border-transparent pb-7.5 transition-colors duration-300 hover:border-gray-300"
                 href="crew-commander.html"><span class="font-bold">02</span> Crew</a>
             </li>
             <li>
-              <a class="border-b-4 border-transparent pb-8 transition-colors duration-300 hover:border-gray-300"
+              <a class="border-b-4 border-transparent pb-7.5 transition-colors duration-300 hover:border-gray-300"
                 href="technology-vehicle.html"><span class="font-bold">03</span> Technology</a>
             </li>
           </ul>
@@ -57,30 +59,30 @@
             class="text-gray-400 font-bold">01</span> PICK YOUR DESTINATION</h1>
         <div class="flex justify-between gap-12 max-lg:flex-col max-lg:justify-center max-lg:items-center mt-20">
           <div>
-            <img class="destination-img max-lg:w-75 max-sm:w-37.5" src="assets/destination/image-moon.webp" alt="Moon Image">
+            <img class="destination-img max-lg:w-75 max-sm:w-37.5" src="assets/destination/image-moon.webp"
+              alt="Moon Image">
           </div>
           <div>
             <div>
               <ul class="flex text-white gap-8 uppercase mb-10 max-lg:justify-center max-lg:items-center">
-                <li class="destination-travel moon border-b-4 pb-2 border-current"><a
-                    class="transition-colors duration-300 hover:border-gray-300" href="destination-moon.html">Moon</a>
+                <li class="destination-travel moon border-b-4 pb-2"><button
+                    class="btn-destinations cursor-pointer duration-300 hover:border-gray-300 hover:border-b-4 hover:pb-2.5 uppercase active:border-gray-300">Moon</button>
                 </li>
-                <li class="destination-travel mars text-blue-300"><a
-                    class="transition-colors duration-300 hover:border-gray-300 hover:border-b-4 hover:pb-2.5"
-                    href="destination-mars.html">Mars</a></li>
-                <li class="destination-travel europa text-blue-300"><a
-                    class="transition-colors duration-300 hover:border-gray-300 hover:border-b-4 hover:pb-2.5"
-                    href="destination-europa.html">Europa</a></li>
-                <li class="destination-travel titan text-blue-300"><a
-                    class="transition-colors duration-300 hover:border-gray-300 hover:border-b-4 hover:pb-2.5"
-                    href="destination-titan.html">Titan</a></li>
+                <li class="destination-travel mars text-blue-300"><button
+                    class="btn-destinations cursor-pointer duration-300 hover:border-gray-300 hover:border-b-4 hover:pb-2.5 uppercase active:border-gray-300">Mars</button></li>
+                <li class="destination-travel europa text-blue-300"><button
+                    class="btn-destinations cursor-pointer duration-300 hover:border-gray-300 hover:border-b-4 hover:pb-2.5 uppercase active:border-gray-300">Europa</button></li>
+                <li class="destination-travel titan text-blue-300"><button
+                    class="btn-destinations cursor-pointer duration-300 hover:border-gray-300 hover:border-b-4 hover:pb-2.5 uppercase active:border-gray-300">Titan</button></li>
               </ul>
             </div>
 
             <div class="max-lg:flex max-lg:flex-col max-lg:justify-center max-lg:items-center">
-              <h2 class="destination-name text-white text-8xl max-lg:text-center max-lg:text-[5rem] max-sm:text-[3.5rem]">MOON</h2>
+              <h2
+                class="destination-name text-white text-[6rem] uppercase max-lg:text-center max-lg:text-[5rem] max-sm:text-[3.5rem]">
+                MOON</h2>
               <p
-                class="destination-description text-blue-300 w-[27.813rem] text-[1.125rem] mb-5 max-lg:w-[128.5] max-lg:text-[1rem] max-lg:text-center max-sm:w-[20.438rem]">
+                class="destination-description text-blue-300 w-[24.438rem] text-[1.125rem] mb-5 max-lg:w-112.5 max-lg:text-[1rem] max-lg:text-center max-sm:w-[18.438rem]">
                 See our planet as you’ve never seen
                 it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re
                 there, take in some history
@@ -89,12 +91,12 @@
             <div class="bg-gray-400 w-2xl h-px max-lg:w-[128.5] max-sm:w-[20.438rem]"></div>
             <div class="flex gap-20 mt-10 max-lg:justify-center max-lg:items-center max-md:flex-col max-md:gap-10">
               <div>
-                <p class="text-blue-300 mb-2 text-[0.875rem]">AVG. DISTANCE</p>
-                <p class="text-white text-[1.75rem]">384,400 KM</p>
+                <p class="text-blue-300 mb-2 text-[0.875rem] max-sm:text-center">AVG. DISTANCE</p>
+                <p class="distance-text text-white text-[1.75rem]">384,400 KM</p>
               </div>
               <div>
                 <p class="text-blue-300 mb-2 text-[0.875rem]">EST. TRAVEL TIME</p>
-                <p class="text-white text-[1.75rem]">3 DAYS</p>
+                <p class="travel-text text-white text-[1.75rem] max-sm:text-center">3 DAYS</p>
               </div>
             </div>
           </div>

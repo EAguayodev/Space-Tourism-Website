@@ -13,7 +13,7 @@
   <script src="js/script.js" defer></script>
 </head>
 <body
-  class="container mx-auto bg-[url('../assets/technology/background-technology-desktop.jpg')] bg-cover bg-no-repeat font-family-bellefair max-md:bg-[url('../assets/technology/background-technology-tablet.jpg')] max-sm:bg-[url('../assets/technology/background-technology-mobile.jpg')]">
+  class="container mx-auto max-sm:overflow-y-hidden bg-[url('../assets/technology/background-technology-desktop.jpg')] bg-cover bg-no-repeat font-family-bellefair max-md:bg-[url('../assets/technology/background-technology-tablet.jpg')] max-sm:bg-[url('../assets/technology/background-technology-mobile.jpg')]">
   <header class="container">
     <nav>
       <div class="flex justify-around items-center relative top-3">
@@ -23,26 +23,28 @@
           </a>
           <button class="hidden mobile-btn max-sm:block cursor-pointer">
             <img class="icon-hamburger" src="assets/shared/icon-hamburger.svg" alt="Hamburger Menu">
-            <img class="icon-close max-sm:hidden" src="assets/shared/icon-close.svg" alt="Close Menu">
+            <img class="icon-close hidden max-sm:relative max-sm:z-50" src="assets/shared/icon-close.svg" alt="Close Menu">
           </button>
         </div>
         <div class="bg-gray-400 w-2xl h-px max-lg:hidden"></div>
-        <div class="backdrop-blur-2xl py-8 px-6 max-sm:absolute max-sm:top-20 max-sm:left-0 max-sm:right-0 max-sm:bg-[#0B0D17] max-sm:py-10 max-sm:px-7 max-sm:hidden">
-          <ul class="menu-nav flex space-x-8 text-white uppercase tracking-widest gap-5 max-sm:flex-col max-sm:gap-20 max-sm:items-center ">
+        <div
+          class="menu-list backdrop-blur-2xl py-8 px-6 max-sm:absolute max-sm:w-63.5 max-sm:h-220 max-sm:-top-3 max-sm:left-30 max-sm:right-0 max-sm:bg-[#0B0D17] max-sm:py-10 max-sm:px-7 max-sm:z-40">
+          <ul
+            class="menu-nav flex space-x-8 text-white uppercase tracking-widest gap-5 max-sm:flex-col max-sm:gap-20 max-sm:items-center max-sm:px-9 max-sm:py-16">
             <li>
-              <a class="border-b-4 border-transparent pb-8 transition-colors duration-300 hover:border-gray-300"
+              <a class="border-b-4 border-transparent pb-7.5 transition-colors duration-300 hover:border-gray-300"
                 href="index.html"><span class="font-bold">00</span> Home</a>
             </li>
             <li>
-              <a class="border-b-4 border-transparent pb-8 transition-colors duration-300 hover:border-gray-300"
+              <a class="border-b-4 border-transparent  pb-7.5 transition-colors duration-300 hover:border-gray-300"
                 href="destination-moon.html"><span class="font-bold">01</span> Destination</a>
             </li>
             <li>
-              <a class="border-b-4 border-transparent pb-8 transition-colors duration-300 hover:border-gray-300"
+              <a class="border-b-4 border-transparent pb-7.5 transition-colors duration-300 hover:border-gray-300"
                 href="crew-commander.html"><span class="font-bold">02</span> Crew</a>
             </li>
             <li>
-              <a class="border-b-4 pb-8 border-current transition-colors duration-300 hover:border-gray-300"
+              <a class="border-b-4 pb-7.5 border-current transition-colors duration-300 hover:border-gray-300"
                 href="technology-vehicle.html"><span class="font-bold">03</span> Technology</a>
             </li>
           </ul>
@@ -53,10 +55,11 @@
   <main>
     <div class="container mx-auto flex justify-center mt-40">
       <div class="max-sm:flex max-sm:flex-col max-sm:items-center">
-        <h1 class="text-[1.75rem] text-white max-lg:text-[1.25rem] max-sm:text-[1rem]"><span class="text-gray-400 font-bold">03</span> SPACE LAUNCH 101</h1>
+        <h1 class="text-[1.75rem] text-white max-lg:text-[1.25rem] max-sm:text-[1rem]"><span
+            class="text-gray-400 font-bold">03</span> SPACE LAUNCH 101</h1>
         <div
           class="flex justify-between items-center gap-20 max-lg:flex max-lg:flex-col max-lg:justify-center max-lg:items-center max-md:items-center">
-          <!-- IMAGE first in DOM → top on tablet/mobile; pushed right on desktop via lg:order-3 -->
+          
           <div class="lg:order-3">
             <picture>
               <source media="(min-width: 1024px)" srcset="assets/technology/image-launch-vehicle-portrait.jpg"
@@ -69,36 +72,37 @@
                 alt="Launch Vehicle Image" width="515" height="527">
             </picture>
           </div>
-          <!-- BUTTONS second in DOM → middle on tablet/mobile; left column on desktop via lg:order-1 -->
+          
           <div class="gap-10 max-lg:flex max-lg:flex-row max-lg:justify-center max-lg:items-center lg:order-1">
             <div>
               <button
-                class="button-technology technology-vehicle bg-white hover:border-white border-white border-2 text-3xl mt-8 rounded-full py-7 px-10 cursor-pointer max-lg:py-2 max-lg:px-5">
+                class="button-technology bg-white hover:border-white border-white border-2 text-3xl mt-8 rounded-full py-7 px-10 cursor-pointer max-lg:py-2 max-lg:px-5">
                 1
               </button>
             </div>
             <div>
               <button
-                class="button-technology technology-spaceport bg-transparent hover:border-white border-gray-400 text-white text-3xl border-2 mt-8 rounded-full py-7 px-10 cursor-pointer max-lg:py-2 max-lg:px-5">
+                class="button-technology bg-transparent hover:border-white border-gray-400 text-white text-3xl border-2 mt-8 rounded-full py-7 px-10 cursor-pointer max-lg:py-2 max-lg:px-5">
                 2
               </button>
             </div>
             <div>
               <button
-                class="button-technology technology-capsule bg-transparent hover:border-white border-gray-400 text-white text-3xl border-2 mt-8 rounded-full py-7 px-10 cursor-pointer max-lg:py-2 max-lg:px-5">
+                class="button-technology bg-transparent hover:border-white border-gray-400 text-white text-3xl border-2 mt-8 rounded-full py-7 px-10 cursor-pointer max-lg:py-2 max-lg:px-5">
                 3
               </button>
             </div>
           </div>
-          <!-- TEXT third in DOM → bottom on tablet/mobile; center on desktop via lg:order-2 -->
+
           <div class="lg:order-2 max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center">
+            <p class="text-[2rem] text-gray-400 max-md:text-[1.5rem] max-lg:text-center max-sm:text-[1.125rem]">THE
+              TERMINOLOGY...</p>
             <h2
-              class="text-[3.5rem] text-white mb-8 w-2xl max-lg:text-center max-lg:text-[2.5rem] max-md:text-[1.5rem] max-sm:text-[1.5rem] max-sm:w-[20.438rem]">
-              <span class="text-[2rem] text-gray-400 max-lg:text-[1.5rem] max-sm:text-[1.125rem]">THE TERMINOLOGY...</span><br>
+              class="technology-name text-[3.5rem] text-white mb-8 w-2xl max-lg:text-center max-lg:text-[2.5rem] max-md:text-[1.5rem] max-sm:text-[1.5rem] max-sm:w-[20.438rem]">
               LAUNCH VEHICLE
             </h2>
             <p
-              class="text-blue-300 w-2xl text-[1.125rem] max-lg:text-center max-lg:text-[1rem] max-lg:w-[128.5] max-md:text-[0.875rem] max-sm:w-[20.438rem] max-sm:mb-8">
+              class="technology-description text-blue-300 w-2xl text-[1.125rem] max-lg:text-center max-lg:text-[1rem] max-lg:w-[128.5] max-md:text-[0.875rem] max-sm:w-[20.438rem] max-sm:mb-8">
               A launch vehicle or carrier rocket is a rocket-propelled vehicle
               used to carry a
               payload from Earth's surface to space, usually to Earth orbit or beyond. Our
