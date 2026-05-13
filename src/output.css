@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-amber-50: oklch(98.7% 0.022 95.277);
     --color-blue-300: hsl(231, 77%, 90%);
     --color-blue-900: hsl(230, 35%, 7%);
     --color-gray-300: oklch(87.2% 0.01 258.338);
@@ -19,18 +18,12 @@
     --container-2xl: 42rem;
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
-    --text-3xl: 1.875rem;
-    --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
-    --text-6xl: 3.75rem;
-    --text-6xl--line-height: 1;
     --text-7xl: 4.5rem;
     --text-7xl--line-height: 1;
-    --text-8xl: 6rem;
-    --text-8xl--line-height: 1;
     --font-weight-bold: 700;
     --tracking-widest: 0.1em;
     --radius-4xl: 2rem;
@@ -405,33 +398,15 @@
   .py-24 {
     padding-block: calc(var(--spacing) * 24);
   }
-  .pb-2 {
-    padding-bottom: calc(var(--spacing) * 2);
-  }
   .pb-7\.5 {
     padding-bottom: calc(var(--spacing) * 7.5);
-  }
-  .pb-8 {
-    padding-bottom: calc(var(--spacing) * 8);
   }
   .font-family-bellefair {
     font-family: var(--font-family-bellefair);
   }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
-  }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
-  }
   .text-4xl {
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
-  }
-  .text-6xl {
-    font-size: var(--text-6xl);
-    line-height: var(--tw-leading, var(--text-6xl--line-height));
   }
   .text-\[0\.875rem\] {
     font-size: 0.875rem;
@@ -441,6 +416,9 @@
   }
   .text-\[1\.125rem\] {
     font-size: 1.125rem;
+  }
+  .text-\[1\.875rem\] {
+    font-size: 1.875rem;
   }
   .text-\[2rem\] {
     font-size: 2rem;
@@ -563,14 +541,6 @@
       content: var(--tw-content);
     }
   }
-  .hover\:border-b-4 {
-    &:hover {
-      @media (hover: hover) {
-        border-bottom-style: var(--tw-border-style);
-        border-bottom-width: 4px;
-      }
-    }
-  }
   .hover\:border-gray-300 {
     &:hover {
       @media (hover: hover) {
@@ -592,13 +562,6 @@
       }
     }
   }
-  .hover\:pb-2\.5 {
-    &:hover {
-      @media (hover: hover) {
-        padding-bottom: calc(var(--spacing) * 2.5);
-      }
-    }
-  }
   .hover\:before\:scale-\[1\.6\] {
     &:hover {
       @media (hover: hover) {
@@ -617,11 +580,6 @@
           opacity: 100%;
         }
       }
-    }
-  }
-  .active\:border-gray-300 {
-    &:active {
-      border-color: var(--color-gray-300);
     }
   }
   .max-xl\:w-\[128\.5\] {
@@ -1068,6 +1026,25 @@
 .btn-explore {
   border-radius: 150px;
   transition: all 0.3s ease;
+}
+.btn-destinations {
+  border-bottom: 3px solid transparent;
+  padding-bottom: 0.5rem;
+  transition: border-color 350ms ease;
+}
+.btn-destinations:hover {
+  border-bottom-color: var(--color-white);
+  color: var(--color-white);
+}
+.btn-destinations.tab-active {
+  border-bottom-color: white;
+}
+.content-transition {
+  transition: opacity 400ms ease, transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.content-transition.content-exiting {
+  opacity: 0;
+  transform: translateX(20px);
 }
 @property --tw-space-x-reverse {
   syntax: "*";

@@ -15,15 +15,16 @@
 <body
   class="container mx-auto max-sm:overflow-y-hidden bg-[url('../assets/technology/background-technology-desktop.jpg')] bg-cover bg-no-repeat font-family-bellefair max-md:bg-[url('../assets/technology/background-technology-tablet.jpg')] max-sm:bg-[url('../assets/technology/background-technology-mobile.jpg')]">
   <header class="container">
-    <nav>
+    <nav aria-label="Primary Navigation">
       <div class="flex justify-around items-center relative top-3">
         <div class="max-sm:w-full max-sm:gap-10 max-sm:flex max-sm:justify-around max-sm:items-center">
-          <a href="index.html">
+          <a href="index.html" aria-label="Space Tourism Home" target="_self">
             <img src="assets/shared/logo.svg" alt="Space Tourism Logo">
           </a>
-          <button class="hidden mobile-btn max-sm:block cursor-pointer">
+          <button class="hidden mobile-btn max-sm:block cursor-pointer" aria-label="Toggle Menu" aria-expanded="false">
             <img class="icon-hamburger" src="assets/shared/icon-hamburger.svg" alt="Hamburger Menu">
-            <img class="icon-close hidden max-sm:relative max-sm:z-50" src="assets/shared/icon-close.svg" alt="Close Menu">
+            <img class="icon-close hidden max-sm:relative max-sm:z-50" src="assets/shared/icon-close.svg"
+              alt="Close Menu">
           </button>
         </div>
         <div class="bg-gray-400 w-2xl h-px max-lg:hidden"></div>
@@ -44,7 +45,8 @@
                 href="crew-commander.html"><span class="font-bold">02</span> Crew</a>
             </li>
             <li>
-              <a class="border-b-4 pb-7.5 border-current transition-colors duration-300 hover:border-gray-300"
+              <a aria-current="page"
+                class="border-b-4 pb-7.5 border-current transition-colors duration-300 hover:border-gray-300"
                 href="technology-vehicle.html"><span class="font-bold">03</span> Technology</a>
             </li>
           </ul>
@@ -59,36 +61,46 @@
             class="text-gray-400 font-bold">03</span> SPACE LAUNCH 101</h1>
         <div
           class="flex justify-between items-center gap-20 max-lg:flex max-lg:flex-col max-lg:justify-center max-lg:items-center max-md:items-center">
-          
-          <div class="lg:order-3">
-            <picture>
-              <source media="(min-width: 1024px)" srcset="assets/technology/image-launch-vehicle-portrait.jpg"
-                width="1024" height="310">
-              <source media="(min-width: 768px)" srcset="assets/technology/image-launch-vehicle-landscape.jpg"
-                width="768" height="310">
-              <source media="(min-width: 460px)" srcset="assets/technology/image-launch-vehicle-landscape.jpg"
-                width="768" height="310">
+
+          <div id="tech-pictures" class="content-transition lg:order-3">
+            <picture data-tech-index="0">
+              <source media="(min-width: 1024px)" srcset="assets/technology/image-launch-vehicle-portrait.jpg">
+              <source media="(min-width: 768px)" srcset="assets/technology/image-launch-vehicle-landscape.jpg">
+              <source media="(min-width: 460px)" srcset="assets/technology/image-launch-vehicle-landscape.jpg">
               <img class="technology-img" src="assets/technology/image-launch-vehicle-landscape.jpg"
-                alt="Launch Vehicle Image" width="515" height="527">
+                alt="Launch Vehicle Image">
+            </picture>
+            <picture data-tech-index="1" class="hidden">
+              <source media="(min-width: 1024px)" srcset="assets/technology/image-spaceport-portrait.jpg">
+              <source media="(min-width: 768px)" srcset="assets/technology/image-spaceport-landscape.jpg">
+              <source media="(min-width: 460px)" srcset="assets/technology/image-spaceport-landscape.jpg">
+              <img class="technology-img" src="assets/technology/image-spaceport-landscape.jpg" alt="Spaceport Image">
+            </picture>
+            <picture data-tech-index="2" class="hidden">
+              <source media="(min-width: 1024px)" srcset="assets/technology/image-space-capsule-portrait.jpg">
+              <source media="(min-width: 768px)" srcset="assets/technology/image-space-capsule-landscape.jpg">
+              <source media="(min-width: 460px)" srcset="assets/technology/image-space-capsule-landscape.jpg">
+              <img class="technology-img" src="assets/technology/image-space-capsule-landscape.jpg"
+                alt="Space Capsule Image">
             </picture>
           </div>
-          
+
           <div class="gap-10 max-lg:flex max-lg:flex-row max-lg:justify-center max-lg:items-center lg:order-1">
             <div>
               <button
-                class="button-technology bg-white hover:border-white border-white border-2 text-3xl mt-8 rounded-full py-7 px-10 cursor-pointer max-lg:py-2 max-lg:px-5">
+                class="button-technology bg-white hover:border-white border-white border-2 text-[1.875rem] mt-8 rounded-full py-7 px-10 cursor-pointer max-lg:py-2 max-lg:px-5">
                 1
               </button>
             </div>
             <div>
               <button
-                class="button-technology bg-transparent hover:border-white border-gray-400 text-white text-3xl border-2 mt-8 rounded-full py-7 px-10 cursor-pointer max-lg:py-2 max-lg:px-5">
+                class="button-technology bg-transparent hover:border-white border-gray-400 text-white text-[1.875rem] border-2 mt-8 rounded-full py-7 px-10 cursor-pointer max-lg:py-2 max-lg:px-5">
                 2
               </button>
             </div>
             <div>
               <button
-                class="button-technology bg-transparent hover:border-white border-gray-400 text-white text-3xl border-2 mt-8 rounded-full py-7 px-10 cursor-pointer max-lg:py-2 max-lg:px-5">
+                class="button-technology bg-transparent hover:border-white border-gray-400 text-white text-[1.875rem] border-2 mt-8 rounded-full py-7 px-10 cursor-pointer max-lg:py-2 max-lg:px-5">
                 3
               </button>
             </div>
@@ -98,11 +110,11 @@
             <p class="text-[2rem] text-gray-400 max-md:text-[1.5rem] max-lg:text-center max-sm:text-[1.125rem]">THE
               TERMINOLOGY...</p>
             <h2
-              class="technology-name text-[3.5rem] text-white mb-8 w-2xl max-lg:text-center max-lg:text-[2.5rem] max-md:text-[1.5rem] max-sm:text-[1.5rem] max-sm:w-[20.438rem]">
+              class="technology-name content-transition text-[3.5rem] text-white mb-8 w-2xl max-lg:text-center max-lg:text-[2.5rem] max-md:text-[1.5rem] max-sm:text-[1.5rem] max-sm:w-[20.438rem]">
               LAUNCH VEHICLE
             </h2>
             <p
-              class="technology-description text-blue-300 w-2xl text-[1.125rem] max-lg:text-center max-lg:text-[1rem] max-lg:w-[128.5] max-md:text-[0.875rem] max-sm:w-[20.438rem] max-sm:mb-8">
+              class="technology-description content-transition text-blue-300 w-2xl text-[1.125rem] max-lg:text-center max-lg:text-[1rem] max-lg:w-[128.5] max-md:text-[0.875rem] max-sm:w-[20.438rem] max-sm:mb-8">
               A launch vehicle or carrier rocket is a rocket-propelled vehicle
               used to carry a
               payload from Earth's surface to space, usually to Earth orbit or beyond. Our

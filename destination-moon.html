@@ -15,15 +15,15 @@
 <body
   class="container mx-auto bg-[url('../assets/destination/background-destination-desktop.jpg')] bg-cover bg-no-repeat font-family-bellefair max-md:bg-[url('../assets/destination/background-destination-tablet.jpg')] max-sm:bg-[url('../assets/destination/background-destination-mobile.jpg')]">
   <header class="container">
-    <nav>
+    <nav aria-label="Primary Navigation">
       <div class="flex justify-around items-center relative top-3">
         <div class="max-sm:w-full max-sm:gap-10 max-sm:flex max-sm:justify-around max-sm:items-center">
-          <a href="index.html">
+          <a href="index.html" aria-label="Space Tourism Home" target="_self">
             <img src="assets/shared/logo.svg" alt="Space Tourism Logo">
           </a>
-          <button class="hidden mobile-btn max-sm:block cursor-pointer">
-            <img class="icon-hamburger" src="assets/shared/icon-hamburger.svg" alt="Hamburger Menu">
-            <img class="icon-close hidden max-sm:relative max-sm:z-50" src="assets/shared/icon-close.svg" alt="Close Menu">
+          <button class="hidden mobile-btn max-sm:block cursor-pointer" aria-label="Toggle Menu" aria-expanded="false">
+            <img class="icon-hamburger" src="assets/shared/icon-hamburger.svg" alt="Menu">
+            <img class="icon-close hidden max-sm:relative max-sm:z-50" src="assets/shared/icon-close.svg" alt="Menu">
           </button>
         </div>
         <div class="bg-gray-400 w-2xl h-px max-lg:hidden"></div>
@@ -36,7 +36,7 @@
                 href="index.html"><span class="font-bold">00</span> Home</a>
             </li>
             <li>
-              <a class="border-b-4 pb-7.5 border-current transition-colors duration-300"
+              <a aria-current="page" class="border-b-4 pb-7.5 border-current transition-colors duration-300"
                 href="destination-moon.html"><span class="font-bold">01</span> Destination</a>
             </li>
             <li>
@@ -59,30 +59,30 @@
             class="text-gray-400 font-bold">01</span> PICK YOUR DESTINATION</h1>
         <div class="flex justify-between gap-12 max-lg:flex-col max-lg:justify-center max-lg:items-center mt-20">
           <div>
-            <img class="destination-img max-lg:w-75 max-sm:w-37.5" src="assets/destination/image-moon.webp"
-              alt="Moon Image">
+            <img class="destination-img content-transition max-lg:w-75 max-sm:w-37.5"
+              src="assets/destination/image-moon.webp" alt="Moon Image">
           </div>
           <div>
-            <div>
+            <div role="tablist" aria-label="Destination List">
               <ul class="flex text-white gap-8 uppercase mb-10 max-lg:justify-center max-lg:items-center">
-                <li class="destination-travel moon border-b-4 pb-2"><button
-                    class="btn-destinations cursor-pointer duration-300 hover:border-gray-300 hover:border-b-4 hover:pb-2.5 uppercase active:border-gray-300">Moon</button>
+                <li class="destination-travel moon"><button role="tab" tabindex="0"
+                    class="btn-destinations tab-active cursor-pointer uppercase"><span>Moon</span></button>
                 </li>
-                <li class="destination-travel mars text-blue-300"><button
-                    class="btn-destinations cursor-pointer duration-300 hover:border-gray-300 hover:border-b-4 hover:pb-2.5 uppercase active:border-gray-300">Mars</button></li>
-                <li class="destination-travel europa text-blue-300"><button
-                    class="btn-destinations cursor-pointer duration-300 hover:border-gray-300 hover:border-b-4 hover:pb-2.5 uppercase active:border-gray-300">Europa</button></li>
-                <li class="destination-travel titan text-blue-300"><button
-                    class="btn-destinations cursor-pointer duration-300 hover:border-gray-300 hover:border-b-4 hover:pb-2.5 uppercase active:border-gray-300">Titan</button></li>
+                <li class="destination-travel text-blue-300"><button role="tab" tabindex="0"
+                    class="btn-destinations cursor-pointer uppercase"><span>Mars</span></button></li>
+                <li class="destination-travel text-blue-300"><button role="tab" tabindex="0"
+                    class="btn-destinations cursor-pointer uppercase"><span>Europa</span></button></li>
+                <li class="destination-travel  text-blue-300"><button role="tab" tabindex="0"
+                    class="btn-destinations cursor-pointer uppercase"><span>Titan</span></button></li>
               </ul>
             </div>
 
             <div class="max-lg:flex max-lg:flex-col max-lg:justify-center max-lg:items-center">
               <h2
-                class="destination-name text-white text-[6rem] uppercase max-lg:text-center max-lg:text-[5rem] max-sm:text-[3.5rem]">
+                class="destination-name content-transition text-white text-[6rem] uppercase max-lg:text-center max-lg:text-[5rem] max-sm:text-[3.5rem]">
                 MOON</h2>
               <p
-                class="destination-description text-blue-300 w-[24.438rem] text-[1.125rem] mb-5 max-lg:w-112.5 max-lg:text-[1rem] max-lg:text-center max-sm:w-[18.438rem]">
+                class="destination-description content-transition text-blue-300 w-[24.438rem] text-[1.125rem] mb-5 max-lg:w-112.5 max-lg:text-[1rem] max-lg:text-center max-sm:w-[18.438rem]">
                 See our planet as you’ve never seen
                 it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re
                 there, take in some history
@@ -92,11 +92,11 @@
             <div class="flex gap-20 mt-10 max-lg:justify-center max-lg:items-center max-md:flex-col max-md:gap-10">
               <div>
                 <p class="text-blue-300 mb-2 text-[0.875rem] max-sm:text-center">AVG. DISTANCE</p>
-                <p class="distance-text text-white text-[1.75rem]">384,400 KM</p>
+                <p class="distance-text content-transition text-white text-[1.75rem]">384,400 KM</p>
               </div>
               <div>
                 <p class="text-blue-300 mb-2 text-[0.875rem]">EST. TRAVEL TIME</p>
-                <p class="travel-text text-white text-[1.75rem] max-sm:text-center">3 DAYS</p>
+                <p class="travel-text content-transition text-white text-[1.75rem] max-sm:text-center">3 DAYS</p>
               </div>
             </div>
           </div>

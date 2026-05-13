@@ -16,6 +16,16 @@ if (mobileBtn && navMenu && iconHamburger && iconClose) {
   });
 }
 
+// Shared transition helper — mirrors the mobile menu slide+fade effect
+function animateTransition(elements, updateFn, duration = 380) {
+  const els = Array.isArray(elements) ? elements : [elements];
+  els.forEach((el) => el && el.classList.add('content-exiting'));
+  setTimeout(() => {
+    updateFn();
+    els.forEach((el) => el && el.classList.remove('content-exiting'));
+  }, duration);
+}
+
 // Get crew info and image of crew members pulled from json file
 fetch("data.json")
   .then((response) => response.json())
@@ -32,18 +42,21 @@ fetch("data.json")
     crewButtons.forEach((button, index) => {
       button.addEventListener("click", () => {
         crewIndex = index;
-        if (crewMemberImage) {
-          crewMemberImage.src = crewData[crewIndex].images.webp;
-        }
-        if (crewMemberName) {
-          crewMemberName.textContent = crewData[crewIndex].name;
-        }
-        if (crewMemberRole) {
-          crewMemberRole.textContent = crewData[crewIndex].role;
-        }
-        if (crewMemberBio) {
-          crewMemberBio.textContent = crewData[crewIndex].bio;
-        }
+        const contentEls = [crewMemberImage, crewMemberName, crewMemberRole, crewMemberBio];
+        animateTransition(contentEls, () => {
+          if (crewMemberImage) {
+            crewMemberImage.src = crewData[crewIndex].images.webp;
+          }
+          if (crewMemberName) {
+            crewMemberName.textContent = crewData[crewIndex].name;
+          }
+          if (crewMemberRole) {
+            crewMemberRole.textContent = crewData[crewIndex].role;
+          }
+          if (crewMemberBio) {
+            crewMemberBio.textContent = crewData[crewIndex].bio;
+          }
+        });
         button.classList.add("bg-white");
       });
     });
@@ -54,9 +67,8 @@ fetch("data.json")
   .then((response) => response.json())
   .then((data) => {
     const technologyData = data.technology;
-    let technologyIndex = 0;
     let technologyButtons = document.querySelectorAll(".button-technology");
-    let technologyImage = document.querySelector(".technology-img");
+    let technologyPictures = document.querySelectorAll("picture[data-tech-index]");
     let technologyName = document.querySelector(".technology-name");
     let technologyDescription = document.querySelector(
       ".technology-description",
@@ -64,19 +76,21 @@ fetch("data.json")
 
     technologyButtons.forEach((button, index) => {
       button.addEventListener("click", () => {
-        technologyIndex = index;
-        if (technologyImage) {
-          // FIXME: Portrait image is not showing on desktop, but landscape image is showing on tablet/mobile. Need to fix this.
-          // NOTE: innerWidth is used to check the width of the viewport and change the image source accordingly. This maybe a workaround for the issue with the portrait image not showing on desktop.
-          technologyImage.src = technologyData[technologyIndex].images.portrait;
-          // technologyImage.src = innerWidth >= 1224 ? technologyData[technologyIndex].images.portrait : technologyData[technologyIndex].images.landscape;
-        }
-        if (technologyName) {
-          technologyName.textContent = technologyData[technologyIndex].name;
-        }
-        if (technologyDescription) {
-          technologyDescription.textContent = technologyData[technologyIndex].description;
-        }
+        const techPicturesWrapper = document.getElementById('tech-pictures');
+        const contentEls = [techPicturesWrapper, technologyName, technologyDescription];
+        animateTransition(contentEls, () => {
+          // Toggle pictures: hide all, show the matching one
+          technologyPictures.forEach((pic) => {
+            const isActive = Number(pic.dataset.techIndex) === index;
+            pic.classList.toggle("hidden", !isActive);
+          });
+          if (technologyName) {
+            technologyName.textContent = technologyData[index].name;
+          }
+          if (technologyDescription) {
+            technologyDescription.textContent = technologyData[index].description;
+          }
+        });
         technologyButtons.forEach((btn) => btn.classList.remove("bg-white"));
         button.classList.add("bg-white");
         button.style.color = "hsl(230, 35%, 7%)";
@@ -101,26 +115,33 @@ fetch("data.json")
     destinationButtons.forEach((button, index) => {
       button.addEventListener("click", () => {
         destinationIndex = index;
-        if (destinationImage) {
-          destinationImage.src = destinationData[destinationIndex].images.webp;
-        }
-        if (destinationName) {
-          destinationName.textContent = destinationData[destinationIndex].name;
-        }
-        if (destinationDescription) {
-          destinationDescription.textContent =
-            destinationData[destinationIndex].description;
-        }
-        if (destinationDistance) {
-          destinationDistance.textContent =
-            destinationData[destinationIndex].distance;
-        }
-        if (destinationTravelTime) {
-          destinationTravelTime.textContent =
-            destinationData[destinationIndex].travel;
-        }
-        
-        button.classList.add("active:border-gray-300");
+        const contentEls = [destinationImage, destinationName, destinationDescription, destinationDistance, destinationTravelTime];
+        animateTransition(contentEls, () => {
+          if (destinationImage) {
+            destinationImage.src = destinationData[destinationIndex].images.webp;
+          }
+          if (destinationName) {
+            destinationName.textContent = destinationData[destinationIndex].name;
+          }
+          if (destinationDescription) {
+            destinationDescription.textContent =
+              destinationData[destinationIndex].description;
+          }
+          if (destinationDistance) {
+            destinationDistance.textContent =
+              destinationData[destinationIndex].distance;
+          }
+          if (destinationTravelTime) {
+            destinationTravelTime.textContent =
+              destinationData[destinationIndex].travel;
+          }
+        });
+        destinationButtons.forEach((btn) => {
+          btn.classList.remove("tab-active");
+          btn.setAttribute("aria-selected", "false");
+        });
+        button.classList.add("tab-active");
+        button.setAttribute("aria-selected", "true");
       });
     });
   });

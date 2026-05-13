@@ -9,7 +9,6 @@
         --color-white: hsl(0, 0%, 100%);
         --color-gray-400: #979797;
 
-        /* Font sizes in rem — scales with user browser font size for accessibility */
         --font-size-body-md: 1.125rem; /* 18px ÷ 16 */
         --font-size-body-sm: 1rem;     /* 16px ÷ 16 */
 }
@@ -57,4 +56,29 @@
 .btn-explore{
     border-radius: 150px;
     transition: all 0.3s ease;
+}
+
+.btn-destinations {
+    border-bottom: 3px solid transparent;
+    padding-bottom: 0.5rem;
+    transition: border-color 350ms ease;
+}
+
+.btn-destinations:hover {
+    border-bottom-color: var(--color-white);
+    color: var(--color-white);
+}
+
+.btn-destinations.tab-active {
+    border-bottom-color: white;
+}
+
+/* Content switch animation — mirrors the mobile menu slide+fade */
+.content-transition {
+    transition: opacity 400ms ease, transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.content-transition.content-exiting {
+    opacity: 0;
+    transform: translateX(20px);
 }
