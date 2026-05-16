@@ -36,10 +36,15 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://your-solution-url.com)
+- Solution URL: [Github](https://github.com/EAguayodev/Space-Tourism-Website)
 - Live Site URL: [Netlify](https://space-tourism-website-travel.netlify.app/)
 
 ## My process
+1. Plan out the technologies I would be using to complete the challenge from start to finish.
+2. Structure out my html document with proper tags for each section and page.
+3. Install dependencies for using TailwindCSS, and Typescript to help write out better code for JavaScript.
+4. Add utilitie classes for making the website responsive for tablet and mobile screen sizes.
+5. Create the mobile menu navigation, destinations tab displays, technology, and crew member tabs for transition their displays based on the users choice for viewing.
 
 ### Built with
 
@@ -51,44 +56,26 @@ Users should be able to:
 
 
 ### What I learned
+- Key learnings from this challenge was being able to close the menu clicking outside the menu box on mobile screens, and pulling the info for the crew members, technologies, and planet destinations from the local json file provided by Frontendmentor.
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
 
 
 ### Continued development
+Definitely want to continue learning and going deeper into using Typescript in my workflows, and using TailwindCSS with ReactJS in upcoming challenges to help prep me for bigger frontend roles.
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Jessewei](https://jessewei.net/writings/implementing-clicking-outside-of-a-menu) - Jesse Wei article came of good use, and helped me figure out how to have the menu close on mobile screens clicking outside of the menu being displayed. Helped explain with examples how to use the mousedown in JavaScript to achieve the outcome.
+- [W3C](https://www.w3.org/WAI/standards-guidelines/wcag/docs/#accessibility-conformance-testing-act-rules) - Great resource shared with me from a member in the community to better understand how to make the challenge more accessible to those reliant on the web being accessible.
 
 
 ### AI Collaboration
 
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
+- I used Claude Ai to provide patterns for displaying between the crew members, technology tabs, and destinations with providing ways to pull it from the local json file provided in the challenge.
+- Used Claude to also help me generate some boilerplate code for doing some repetitve structuring of my html document. For example, generating the layout for the desktop view navigation menus.
 
-- What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
-- How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
-- What worked well? What didn't?
 
 
 ## Author
@@ -96,4 +83,4 @@ Describe how you used AI tools (if any) during this project. This helps demonstr
 - Frontend Mentor - [@EAguayodev](https://www.frontendmentor.io/profile/EAguayodev)
 
 ## Acknowledgments
-
+Want to thank frontendmentor members who run the website for providing the challenge for myself to continue honing my skill development for using TailwindCSS. Also acknowledgements to Grace Snow for having a look over my code when I needed help debugging the navbars, and helping with where to add the proper aria's within my codebase.

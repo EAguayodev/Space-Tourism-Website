@@ -1,4 +1,3 @@
-// mobile menu
 const mobileBtn = document.querySelector(".mobile-btn");
 const navMenu = document.querySelector(".menu-list");
 const iconHamburger = document.querySelector(".icon-hamburger");
@@ -9,6 +8,11 @@ if (mobileBtn && navMenu && iconHamburger && iconClose) {
 
   mobileBtn.addEventListener("click", () => {
     const isOpen = navMenu.classList.toggle("active");
+    document.addEventListener('mousedown', (event) => {
+      if (isOpen && !navMenu.contains(event.target) && !mobileBtn.contains(event.target)) {
+        navMenu.classList.remove("active");
+      }
+    });
 
     mobileBtn.setAttribute("aria-expanded", String(isOpen));
     iconHamburger.classList.toggle("hidden", isOpen);
@@ -16,7 +20,7 @@ if (mobileBtn && navMenu && iconHamburger && iconClose) {
   });
 }
 
-// Shared transition helper — mirrors the mobile menu slide+fade effect
+
 function animateTransition(elements, updateFn, duration = 380) {
   const els = Array.isArray(elements) ? elements : [elements];
   els.forEach((el) => el && el.classList.add('content-exiting'));
@@ -26,7 +30,7 @@ function animateTransition(elements, updateFn, duration = 380) {
   }, duration);
 }
 
-// Get crew info and image of crew members pulled from json file
+
 fetch("data.json")
   .then((response) => response.json())
   .then((data) => {
@@ -62,7 +66,7 @@ fetch("data.json")
     });
   });
 
-// Get Technology info pulled from json file
+
 fetch("data.json")
   .then((response) => response.json())
   .then((data) => {
@@ -79,7 +83,7 @@ fetch("data.json")
         const techPicturesWrapper = document.getElementById('tech-pictures');
         const contentEls = [techPicturesWrapper, technologyName, technologyDescription];
         animateTransition(contentEls, () => {
-          // Toggle pictures: hide all, show the matching one
+     
           technologyPictures.forEach((pic) => {
             const isActive = Number(pic.dataset.techIndex) === index;
             pic.classList.toggle("hidden", !isActive);
@@ -92,13 +96,14 @@ fetch("data.json")
           }
         });
         technologyButtons.forEach((btn) => btn.classList.remove("bg-white"));
+        technologyButtons.forEach((btn) => btn.classList.add("text-white"));
         button.classList.add("bg-white");
-        button.style.color = "hsl(230, 35%, 7%)";
+        button.classList.remove("text-white");
       });
     });
   });
 
-// planet info pulled from json file
+
 fetch("data.json")
   .then((response) => response.json())
   .then((data) => {
