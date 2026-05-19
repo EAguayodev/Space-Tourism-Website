@@ -38,10 +38,10 @@ fetch("data.json")
 
     let crewIndex = 0;
     const crewButtons = document.querySelectorAll(".crew-btn");
-    let crewMemberImage = document.querySelector(".crew-image");
-    let crewMemberName = document.querySelector(".crew-member");
-    let crewMemberRole = document.querySelector(".crew-title");
-    let crewMemberBio = document.querySelector(".crew-description");
+    const crewMemberImage = document.querySelector(".crew-image");
+    const crewMemberName = document.querySelector(".crew-member");
+    const crewMemberRole = document.querySelector(".crew-title");
+    const crewMemberBio = document.querySelector(".crew-description");
 
     crewButtons.forEach((button, index) => {
       button.addEventListener("click", () => {
@@ -71,10 +71,10 @@ fetch("data.json")
   .then((response) => response.json())
   .then((data) => {
     const technologyData = data.technology;
-    let technologyButtons = document.querySelectorAll(".button-technology");
-    let technologyPictures = document.querySelectorAll("picture[data-tech-index]");
-    let technologyName = document.querySelector(".technology-name");
-    let technologyDescription = document.querySelector(
+    const technologyButtons = document.querySelectorAll(".button-technology");
+    const technologyPictures = document.querySelectorAll("picture[data-tech-index]");
+    const technologyName = document.querySelector(".technology-name");
+    const technologyDescription = document.querySelector(
       ".technology-description",
     );
 
@@ -109,14 +109,14 @@ fetch("data.json")
   .then((data) => {
     const destinationData = data.destinations;
     let destinationIndex = 0;
-    let destinationButtons = document.querySelectorAll(".btn-destinations");
-    let destinationImage = document.querySelector(".destination-img");
-    let destinationName = document.querySelector(".destination-name");
-    let destinationDescription = document.querySelector(
+    const destinationButtons = document.querySelectorAll(".btn-destinations");
+    const destinationImage = document.querySelector(".destination-img");
+    const destinationName = document.querySelector(".destination-name");
+    const destinationDescription = document.querySelector(
       ".destination-description",
     );
-    let destinationDistance = document.querySelector(".distance-text");
-    let destinationTravelTime = document.querySelector(".travel-text");
+    const destinationDistance = document.querySelector(".distance-text");
+    const destinationTravelTime = document.querySelector(".travel-text");
     destinationButtons.forEach((button, index) => {
       button.addEventListener("click", () => {
         destinationIndex = index;
