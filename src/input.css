@@ -17,6 +17,14 @@
     font-size: var(--font-size-body-sm);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 @media (max-width: 40rem) {
     html,
     body {
@@ -26,7 +34,7 @@
     }
 
     .menu-list {
-        display: flex !important;
+        display: flex;
         visibility: hidden;
         pointer-events: none;
         opacity: 0;

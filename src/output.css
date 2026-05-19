@@ -12,8 +12,6 @@
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: #979797;
     --color-gray-600: oklch(44.6% 0.03 256.802);
-    --color-gray-900: oklch(21% 0.034 264.665);
-    --color-black: #000;
     --color-white: hsl(0, 0%, 100%);
     --spacing: 0.25rem;
     --container-lg: 32rem;
@@ -196,9 +194,6 @@
   .top-3 {
     top: calc(var(--spacing) * 3);
   }
-  .col-start-auto {
-    grid-column-start: auto;
-  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
@@ -259,17 +254,11 @@
   .inline-flex {
     display: inline-flex;
   }
-  .table {
-    display: table;
-  }
   .h-1 {
     height: calc(var(--spacing) * 1);
   }
   .h-px {
     height: 1px;
-  }
-  .w-2 {
-    width: calc(var(--spacing) * 2);
   }
   .w-2\.5 {
     width: calc(var(--spacing) * 2.5);
@@ -286,17 +275,8 @@
   .w-\[24\.438rem\] {
     width: 24.438rem;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .transform {
-    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
-  }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -341,24 +321,8 @@
   .rounded-4xl {
     border-radius: var(--radius-4xl);
   }
-  .rounded-\[50\%\] {
-    border-radius: 50%;
-  }
-  .rounded-\[50px\] {
-    border-radius: 50px;
-  }
-  .rounded-\[150\%\] {
-    border-radius: 150%;
-  }
-  .rounded-\[150px\] {
-    border-radius: 150px;
-  }
   .rounded-full {
     border-radius: calc(infinity * 1px);
-  }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
   }
   .border-2 {
     border-style: var(--tw-border-style);
@@ -437,9 +401,6 @@
   .py-24 {
     padding-block: calc(var(--spacing) * 24);
   }
-  .pb-7 {
-    padding-bottom: calc(var(--spacing) * 7);
-  }
   .pb-7\.5 {
     padding-bottom: calc(var(--spacing) * 7.5);
   }
@@ -482,9 +443,6 @@
     --tw-tracking: var(--tracking-widest);
     letter-spacing: var(--tracking-widest);
   }
-  .text-black {
-    color: var(--color-black);
-  }
   .text-blue-300 {
     color: var(--color-blue-300);
   }
@@ -494,28 +452,14 @@
   .text-gray-400 {
     color: var(--color-gray-400);
   }
-  .text-gray-900 {
-    color: var(--color-gray-900);
-  }
   .text-white {
     color: var(--color-white);
   }
   .uppercase {
     text-transform: uppercase;
   }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
   .backdrop-blur-2xl {
     --tw-backdrop-blur: blur(var(--blur-2xl));
-    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-  }
-  .backdrop-filter {
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
@@ -1032,33 +976,6 @@
       font-size: 3.5rem;
     }
   }
-  .max-sm\:hover\:border-gray-300 {
-    @media (width < 40rem) {
-      &:hover {
-        @media (hover: hover) {
-          border-color: var(--color-gray-300);
-        }
-      }
-    }
-  }
-  .max-sm\:hover\:border-r-gray-300 {
-    @media (width < 40rem) {
-      &:hover {
-        @media (hover: hover) {
-          border-right-color: var(--color-gray-300);
-        }
-      }
-    }
-  }
-  .max-sm\:hover\:border-r-white {
-    @media (width < 40rem) {
-      &:hover {
-        @media (hover: hover) {
-          border-right-color: var(--color-white);
-        }
-      }
-    }
-  }
   .lg\:order-1 {
     @media (width >= 64rem) {
       order: 1;
@@ -1078,13 +995,20 @@
 .menu-nav {
   font-size: var(--font-size-body-sm);
 }
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
 @media (max-width: 40rem) {
   html, body {
     overflow-x: hidden;
     overflow-x: clip;
   }
   .menu-list {
-    display: flex !important;
+    display: flex;
     visibility: hidden;
     pointer-events: none;
     opacity: 0;
@@ -1130,26 +1054,6 @@
   opacity: 0;
   transform: translateX(20px);
 }
-@property --tw-rotate-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-y {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-z {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-y {
-  syntax: "*";
-  inherits: false;
-}
 @property --tw-space-x-reverse {
   syntax: "*";
   inherits: false;
@@ -1167,11 +1071,6 @@
 @property --tw-tracking {
   syntax: "*";
   inherits: false;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
 @property --tw-backdrop-blur {
   syntax: "*";
@@ -1236,16 +1135,10 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-rotate-x: initial;
-      --tw-rotate-y: initial;
-      --tw-rotate-z: initial;
-      --tw-skew-x: initial;
-      --tw-skew-y: initial;
       --tw-space-x-reverse: 0;
       --tw-border-style: solid;
       --tw-font-weight: initial;
       --tw-tracking: initial;
-      --tw-outline-style: solid;
       --tw-backdrop-blur: initial;
       --tw-backdrop-brightness: initial;
       --tw-backdrop-contrast: initial;
