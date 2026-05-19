@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="src/input.css">
   <link rel="stylesheet" href="src/output.css">
-  <script src="js/script.js" type="text/javascript" defer></script>
+  <script src="js/script.js" defer></script>
 </head>
 <body
   class="container mx-auto max-sm:overflow-y-hidden bg-[url('../assets/home/background-home-desktop.jpg')] bg-cover bg-no-repeat font-family-bellefair max-lg:bg-[url('../assets/home/background-home-tablet.jpg')] max-sm:bg-[url('../assets/home/background-home-mobile.jpg')]">
@@ -21,17 +21,17 @@
           <a href="index.html" aria-label="Space Tourism Home" target="_self">
             <img src="assets/shared/logo.svg" alt="Space Tourism Logo">
           </a>
-          <button class="hidden mobile-btn max-sm:block cursor-pointer" aria-label="Toggle Menu" aria-expanded="false">
+          <button class="hidden mobile-btn max-sm:block cursor-pointer" type="button" aria-label="Toggle Menu" aria-expanded="false">
             <img class="icon-hamburger" src="assets/shared/icon-hamburger.svg" alt="Hamburger Menu">
             <img class="icon-close hidden max-sm:relative max-sm:z-50" src="assets/shared/icon-close.svg" alt="Close Menu">
           </button>
         </div>
         <div class="bg-gray-400 w-2xl h-px max-lg:hidden"></div>
-        <div role="navigation" aria-expanded="false"
+        <div aria-expanded="false"
           class="menu-list backdrop-blur-2xl py-8 px-6 max-sm:absolute max-sm:-top-6 max-sm:right-0 max-sm:w-63.5 max-sm:h-220 max-sm:z-40 max-sm:origin-right">
           <ul role="menu" class="menu-nav flex text-white uppercase tracking-widest gap-5 max-sm:flex-col max-sm:gap-10 max-sm:px-0 max-sm:py-16">
-            <li class="max-sm:w-full max-sm:border-r-2 max-sm:border-b-0">
-              <a aria-current="page" class="border-b-4 pb-7.5 border-current transition-colors duration-300 max-sm:border-b-0" href="index.html"><span
+            <li aria-current="page" class="max-sm:w-full max-sm:border-r-2 max-sm:border-b-0">
+              <a class="border-b-4 pb-7.5 border-current transition-colors duration-300 max-sm:border-b-0" href="index.html"><span
                   class="font-bold">00</span> Home</a>
             </li>
             <li>

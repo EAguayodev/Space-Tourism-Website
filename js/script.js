@@ -37,7 +37,7 @@ fetch("data.json")
     const crewData = data.crew;
 
     let crewIndex = 0;
-    let crewButtons = document.querySelectorAll(".crew-btn");
+    const crewButtons = document.querySelectorAll(".crew-btn");
     let crewMemberImage = document.querySelector(".crew-image");
     let crewMemberName = document.querySelector(".crew-member");
     let crewMemberRole = document.querySelector(".crew-title");
